@@ -1,0 +1,28 @@
+---
+layout: post
+---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in site.data.latex %}
+        <tr>
+            <td>{{ entry.name}}</td>
+            <td>{{ entry.description }}</td>
+            <td>
+                <a href="{{ entry.url}} ">
+                    {{ entry.url }}
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
